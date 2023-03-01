@@ -1,0 +1,80 @@
+.formulario{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 90%;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input{
+    margin-bottom: 15px;
+}
+label{
+    color: var(--white);
+    margin-left: 5px;
+}
+.form input, textarea{
+    font-family: var(--fontText);
+    width: 100%;
+    padding: 12px 20px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    background-color: #1f1f1f;
+    border: 1px solid #343434;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--text);
+}
+input::placeholder,
+textarea::placeholder{
+    color: var(--text);
+}
+input,
+textarea{
+    outline: none;
+}
+input:hover,
+textarea:hover{
+    
+    border: 1px solid var(--primary);
+}
+.input small{
+    color: #fc3d3d;
+    margin-left: 5px;
+    visibility: hidden;
+}
+.input.error small{
+    visibility: visible;
+}
+.input.error input, 
+.input.error textarea {
+	border-color: #fc3d3d;
+}
+
+button[type=submit] {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 700;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .3s ease-in, color .3s ease-in;
+  }
+  button[type=submit]:hover {
+    background-color: var(--primary);
+    color: var(--bg-secundary);
+  }
+
+
+@media screen and (min-width:831px) {
+    .formulario{
+        max-width: 50%;
+    }
+}

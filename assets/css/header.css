@@ -1,0 +1,135 @@
+.header{
+    background-color: #000000f1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.nav{
+    padding: 20px 0 10px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+    
+}
+
+.nav__logo{
+    font-size: 2.5rem;
+    z-index: 1;
+}
+.nav__hamburguer, 
+.nav__close{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+    z-index: 1;
+    transform: scale(0);
+}
+
+.active{
+    transform: scale(1);
+}
+
+.nav__icon{
+    width: 40px;
+}
+.nav__links{
+    background-color: #000000f1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+
+    transform: translateX(-100%);
+    transition: .3s transform;
+}
+
+.active-menu{
+    transform: translatex(0);
+}
+
+.nav__links-item{
+    font-family: var(--fontTitle);
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+}
+.nav__links-link{
+    color: var(--white);
+    position: relative;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transition: color .5s;
+}
+.nav__links-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: .125rem;
+    border-radius: .25rem;
+    background-color: var(--primary);
+    bottom: 0;
+    left: 0;
+    margin-bottom: -.2rem;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+.nav__links-link:hover{
+    color: var(--primary)
+}
+.nav__links-link:hover::before {
+    color: var(--primary);
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.nav__links-btn{
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    color: var(--primary);
+    cursor: pointer;
+    font-family: var(--fontTitle);
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color .3s ease-in, color .3s ease-in;
+}
+.nav__links-btn:hover{
+    background-color: var(--primary);
+    color:var(--bg-primary)
+}
+
+
+@media screen and (min-width:999px) {
+    .nav__links{
+        align-items: center;
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1rem;
+        grid-auto-flow: column;
+    
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+    .active{
+        transform: scale(0);
+    }
+}

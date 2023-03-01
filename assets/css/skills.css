@@ -1,0 +1,24 @@
+
+.skills__list{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat( auto-fit, minmax(108px, 1fr) );
+    justify-items: center;
+    
+  padding: 0 4%;
+}
+.skills__item{
+    background-color: #171131;
+    border: 1px solid #271d50;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 20px 20px;
+    width: 90px;
+}
+.skills__icon{
+    max-width: 50px;
+}

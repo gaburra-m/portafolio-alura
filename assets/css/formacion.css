@@ -1,0 +1,36 @@
+.forma__list{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat( auto-fit, minmax(320px, 1fr) );
+    justify-items: center;
+    
+  padding: 0 4%;
+}
+.forma__item{
+    background-color: var(--white);
+    border: 1px solid #271d50;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    width: 320px;
+    min-height: 350px;
+}
+.forma__icon{
+    max-width: 320px;
+}
+.forma__info{
+    margin: 10px 0;
+}
+.forma__title{
+    color: var(--white);
+    font-size: 1.1rem;
+    font-family: var(--fontTitle);
+    margin-bottom: 5px;
+}
+.forma__fecha{
+    font-size: .8rem;
+    color: #b9ccf0;
+}

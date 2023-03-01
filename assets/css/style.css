@@ -1,0 +1,40 @@
+:root{
+    --bg-primary: #000000;
+    --bg-secundary: #100c24;
+    --primary: #00FFFF;
+    --white: #ffffff;
+    --text: #E7E7E7;
+    --fontText: 'Montserrat', sans-serif;
+    --fontTitle: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+  }
+body{
+    background-color: var(--bg-primary);
+    color: var(--text);
+    font-family: var(--fontText);
+    
+}
+.container{
+    margin: 0 auto;
+    width: 95%;
+    max-width: 75rem;
+    overflow: hidden;
+    padding: 3rem 0;
+}
+.bg-alt{
+    background-color: var(--bg-secundary);
+    padding: 3rem 0;
+}
+.mb{
+    margin-bottom: 50px;
+}
+.title{
+    color: var(--primary);
+    font-family: var(--fontTitle);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
